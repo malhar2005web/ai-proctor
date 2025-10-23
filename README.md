@@ -1,76 +1,82 @@
-# Object Detection using YOLOv5 and Tensorflow.js
+# 🧠 AI Proctor
 
-<p align="center">
-  <img src="./sample.png" />
-</p>
-
-![love](https://img.shields.io/badge/Made%20with-🖤-white)
-![tensorflow.js](https://img.shields.io/badge/tensorflow.js-white?logo=tensorflow)
+AI Proctor is an intelligent online exam monitoring system built with **Node.js**, **Express**, and **AI-based detection** to ensure exam integrity.  
+It uses facial detection, voice analysis, and behavior tracking to prevent cheating in real-time.
 
 ---
 
-[**More Feature Version**](https://hyuto.github.io/showcase/yolov5-tfjs)
+## 🚀 Features
+
+- 👀 **Face Detection** – Detects if the candidate leaves the camera frame.  
+- 🧏 **Multiple Face Detection** – Flags if more than one person appears.  
+- 🎙 **Voice Monitoring** – Captures unusual background sounds or speech.  
+- ⚙️ **Browser Activity Tracking** – Detects tab switching or window minimization.  
+- 🧾 **Logs and Reports** – Generates activity reports for examiners.  
 
 ---
 
-Object Detection application right in your browser. Serving YOLOv5 in browser using tensorflow.js
-with `webgl` backend.
+## 🛠️ Tech Stack
 
-**Setup**
+| Component | Technology |
+|------------|-------------|
+| Frontend | React.js |
+| Backend | Node.js + Express |
+| AI/ML | TensorFlow.js / BlazeFace |
+| Database | MongoDB |
+| Authentication | JWT |
+| Deployment | GitHub / Render / Vercel |
 
-```bash
-git clone https://github.com/Hyuto/yolov5-tfjs.git
-cd yolov5-tfjs
-yarn install #Install dependencies
-```
+---
 
-**Scripts**
+## 📦 Installation
 
-```bash
-yarn start # Start dev server
-yarn build # Build for productions
-```
-
-## Model
-
-YOLOv5n model converted to tensorflow.js.
-
-```
-used model : yolov5n
-size       : 7.5 Mb
-```
-
-**Use another model**
-
-Use another YOLOv5 model.
-
-1. Clone [yolov5](https://github.com/ultralytics/yolov5) repository
-
+1. **Clone the repo**
    ```bash
-   git clone https://github.com/ultralytics/yolov5.git && cd yolov5
+   git clone https://github.com/malhar2005web/ai-proctor.git
    ```
-
-   Install `requirements.txt` first
-
+2. **Go into the project folder**
    ```bash
-   pip install -r requirements.txt
+   cd ai-proctor
    ```
-
-2. Export model to tensorflow.js format
+3. **Install dependencies**
    ```bash
-   export.py --weights yolov5*.pt --include tfjs
+   npm install
    ```
-3. Copy `yolov5*_web_model` to `./public`
-4. Update `modelName` in `App.jsx` to new model name
-   ```jsx
-   ...
-   // model configs
-   const modelName = "yolov5*"; // change to new model name
-   const classThreshold = 0.25;
-   ...
+4. **Run the app**
+   ```bash
+   npm start
    ```
-5. Done! 😊
 
-## Reference
+---
 
-https://github.com/ultralytics/yolov5
+## 📁 Folder Structure
+```
+ai-proctor/
+├── backend/
+│   ├── server.js
+│   ├── routes/
+│   ├── controllers/
+│   └── models/
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚡ Future Enhancements
+- AI-based **eye movement tracking**
+- Integration with **LLM for behavior summary**
+- **Email alerts** for suspicious activities
+- Cloud-based report dashboard
+
+---
+
+## 👨‍💻 Author
+**Malhar Kulkarni**  
+📍 Pune, India  
+🔗 [GitHub Profile](https://github.com/malhar2005web)
